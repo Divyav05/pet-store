@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial;
+  background-color: #f1f1f1;
+}
+
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.left {
+  left: 0;
+
+}
+
+.right {
+  right: 0;
+
+}
+
+.centered {
+  position: absolute;
+  top: 30%;
+  left: 20%;
+  transform: translate(0%, -50%);
+  text-align: center;
+}
+
+.centered img {
+  width: 450px;
+ 
+}
+
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+
+</style>
+</head>
+<body>
+<br><center>
+<h2><font face = "times new roman" color = black>ABOUT US</font></h2></center>
+
+	<center>
+    <img src="dogabt.jpg">
+</center>
+    <font color = "black" size = 5>
+    <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspAs pet parents ourselves, we want to help every pet parent and their pet meet all their needs through our innovative products &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspand services. 
+Our hope is that we can play a meaningful role in bringing pets and their humans closer to each other for years &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspand years to come, and through that build a kinder world.</p>
+ 
+
+<br><br>
+<center><h2><font face = "times new roman">FREQUENTLY ASKED QUESTIONS</font></h2></center>
+     
+
+<button type="button" class="collapsible">Do you sell pets?</button>
+<div class="content">
+  <p><font size = 3>No, we do not sell pets.Our wish is to provide the best products and services that can help each pet live their best lives.</p></font>
+</div>
+<button type="button" class="collapsible">Do you help out with pet adoption?</button>
+<div class="content">
+  <p><font size = 3>The HUFT Foundation plays an active role in collaborating with animal welfare NGOs and organising adoption drives.
+ We also help amplify any adoption requests that come our way.</p></font>
+</div>
+<button type="button" class="collapsible">Can products be customized?</button>
+<div class="content">
+  <p><font size = 3>Yes! We understand that every pet has their own individual needs and a one-size-fits-all philosophy does not work with them. This is why we love customising and personalising pet products. We can have beds, bowls, collars, toys and almost anything else specially designed to suit your pet. 
+If your pet has any special needs, do get in touch with us and we will do our best to meet your requirements.</p></font>
+</div>
+<button type="button" class="collapsible">Are your stores pet friendly?</button>
+<div class="content">
+  <p><font size = 3>All our stores except those located within malls are pet-friendly. Do remember to keep your pets on a leash in case other furries are visiting at the same time 
+or there are streeties resting around the stores.Cats and birds tend to get nervous in new spaces, so if you are bringing them along, please keep them securely in pet-safe carriers.</p></font>
+</div>
+
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+
+
+
+</body>
+</html> 

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.error
+{color:white;
+}
+span {
+  display: block;
+}
+
+.bg-image {
+  /* The image used */
+  background-image: url("dogimg.jpg");
+  
+  /* Add the blur effect */
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+  
+  /* Full height */
+  height: 100%; 
+  
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Position text in the middle of the page/image */
+.bg-text {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+}
+
+</style>
+</head>
+<body>
+
+
+<script src = js/jquery-3.6.0.min.js></script>
+<script src = js/jquery.validate.js></script>
+<script>
+
+$(document).ready(function(){
+$("#frm").validate({
+rules : {
+uname:"required",
+num:"required",
+email:"required",
+service:"requied",
+date:"required",
+time:"required"
+},
+messages:{
+uname:"Please fill name should not be empty",
+num:"Enter only the number country code is not required",
+email:"required",
+service:"required",
+date:"required",
+time:"required",
+}
+});
+});
+</script>
+
+
+<div class="bg-image"></div>
+<div class="bg-text">
+
+<form id=frm><br><br><br><br>
+<font color = white>NAME : </font><input type = text name="uname"><br><br><br>
+<font color = white>PHONE NUMBER : </font><input type = number name="num"><br><br><br>
+<font color = white>EMAIL : </font><input type = email name="email"><br><br><br>
+<font color = white><label for="service">CHOOSE YOUR SERVICE: </label>
+  <select id="service" name="service">
+    <option value="haircut">HAIRCUT</option>
+    <option value="treatment">TREATMENT</option>
+    <option value="texture">TEXTURE</option>
+    <option value="spaandservice">SPA AND SERVICE</option>
+  </select>
+<font color = white>APOINTMENT DATE : </font><input type = date name="date"><br><br><br>
+<font color = white>APOINTMENT TIME : </font><input type = time name="time"><br><br><br>
